@@ -1,6 +1,8 @@
 FROM ubuntu:22.04
 
 LABEL maintainer="James Patrick Conlon"
+LABEL version="0.0"
+LABEL description="Conan Exiles Server Docker."
 
 ENV TIMEZONE=Americas/Chicago \
     DEBIAN_FRONTEND=noninteractive \
@@ -38,6 +40,10 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Copies from the github repo's src/ directory to image's root directory
+# This happens to be where the Dockerfile is.
+# The files conanexiles_controller, rconcli, and steamcmd_setup were on the image
+# and have been copied to the from_image directory
 COPY . ./
 
 RUN ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
