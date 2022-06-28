@@ -46,6 +46,9 @@ RUN apt-get update \
 # and have been copied to the from_image directory
 COPY . ./
 
+# Guessing this is how it works.
+COPY ../from_image/usr/bin/. ./usr/bin/
+
 RUN ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
     && echo $TIMEZONE > /etc/timezone \
     && chmod +x /entrypoint.sh \
