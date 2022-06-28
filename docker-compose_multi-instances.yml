@@ -11,6 +11,7 @@ services:
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=My Cool Server 1"
       - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=MySecret"
       - "CONANEXILES_INSTANCENAME=exiles0"
+      - "CONANEXILES_MASTERSERVER=1"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
       - "CONANEXILES_Game_RconPlugin_RconPassword=REDACTED"
       - "CONANEXILES_Game_RconPlugin_RconPort=25575"
