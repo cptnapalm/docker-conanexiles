@@ -422,14 +422,14 @@ services:
       - "CONANEXILES_MODS=880454836,1159180273,1389908968,1369743238,2050780234,2356146223,1701136207"
 ```
 
-NOTE: Yout can get the modids from Steamworkshop.
+NOTE: You can get the modids from Steamworkshop.
 
 After a restart the mods will be downloaded, activated and updated via steamworkshop.
 
 ## Environment Variables and Config Options
 
-A conan exiles dedicated server uses a lot of configuration options to influence nearly every aspect of the game logics.
-To have full control of this complex configuration situation i implemented a logic to set these values in every config files.
+A Conan Exiles dedicated server uses a lot of configuration options to influence nearly every aspect of the game logics.
+To have full control of this complex configuration situation I implemented a logic to set these values in every config files.
 
 ConanExiles uses a common ini format. That means that a config file has the following logic:
 
