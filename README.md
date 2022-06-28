@@ -7,6 +7,11 @@
 [![Donation](https://img.shields.io/badge/Buy%20me%20a-coffee-blue?style=flat)](https://www.paypal.com/donate?business=VGB57FGZRDEFQ&currency_code=EUR)
 
 ---
+**BIGGER NOTE**
+This is a fork I'm putzing around with.  
+This thing isn't working yet.  Don't use it.
+
+---
 **NOTE**
 
 Mod support reworked. Manual Installation with mods.txt File will no longer work. Use the New Env Variable. See the mods section within this readme for more informations and the list of mods we are currently using on our dedicated server - i can heavily recommend them.
