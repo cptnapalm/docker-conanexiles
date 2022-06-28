@@ -1,8 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
-LABEL maintainer="Paul Steinlechner"
+LABEL maintainer="James Patrick Conlon"
 
-ENV TIMEZONE=Europe/Vienna \
+ENV TIMEZONE=Americas/Chicago \
     DEBIAN_FRONTEND=noninteractive \
     CONANEXILES_MASTERSERVER=1 \
     CONANEXILES_Game_RconPlugin_RconEnabled=1 \
@@ -22,7 +22,7 @@ RUN apt-get update \
 RUN dpkg --add-architecture i386 \
     && curl https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
     && apt-add-repository 'https://dl.winehq.org/wine-builds/ubuntu/' \
-    && apt-add-repository ppa:cybermax-dexter/sdl2-backport \
+#    && apt-add-repository ppa:cybermax-dexter/sdl2-backport \
     && apt-get update \
     && apt-get install --install-recommends --assume-yes winehq-devel \
     && pip3 install python-valve \
