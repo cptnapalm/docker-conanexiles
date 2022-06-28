@@ -101,7 +101,7 @@ setup_server_config_first_time() {
 server_settings_template_pvp() {
     echo """
 [ServerSettings]
-PVPEnabled=True
+PVPEnabled=False
 AdminPassword=ChangeMe
 NPCMindReadingMode=0
 MaxNudity=2
