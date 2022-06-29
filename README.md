@@ -9,7 +9,24 @@
 ---
 **BIGGER NOTE**
 This is a fork I'm putzing around with.
-This thing isn't working yet.  Don't use it.
+The files, which I know of, that had been included in the
+docker image are now included here. As a result, the
+original image does not appear to be needed and the one
+pulled in is now standard Ubuntu 22.04.
+
+One consequence is that the docker image will need to be built.
+cd your way to the src directory and:
+docker build - < Dockerfile
+Personally, I added '-t crombuntu' because I thought it'd be
+funny.
+
+CPU usage with the default settings is rather higher than
+standard, but I've been happy with the performance.
+
+PVE is now the default.
+
+It works for me which is pretty good as the first time I have
+ever touched docker was about 12 hours ago.
 
 ---
 **NOTE**

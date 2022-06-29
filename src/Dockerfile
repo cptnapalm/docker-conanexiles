@@ -43,14 +43,13 @@ RUN apt-get update \
 # Copies from the github repo's src/ directory to image's root directory
 # This happens to be where the Dockerfile is.
 # The files conanexiles_controller, rconcli, and steamcmd_setup were on the image
-# and have been copied to the from_image directory
+# and have been copied to the necessary directory.
 
-# Contents of from_image have been copied to the src folder so the below might work again.
+# Needed for files which will be copied there next.
+RUN mkdir -p /var/lib/conanexiles
+
+# Contents of from the image have been copied to the src folder in appropriate directories..
 COPY . ./
-
-# Guessing this is how it works.
-# Wrong: everything must be in this folder
-# COPY ../from_image/usr/bin/. ./usr/bin/
 
 RUN ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
     && echo $TIMEZONE > /etc/timezone \
