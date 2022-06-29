@@ -16,9 +16,9 @@ pulled in is now standard Ubuntu 22.04.
 
 One consequence is that the docker image will need to be built.
 cd your way to the src directory and:
-docker build - < Dockerfile
-Personally, I added '-t crombuntu' because I thought it'd be
-funny.
+docker build /path/to/Dockerfile/directory
+Note: 'docker build - < Dockerfile' doesn't work. Why?  Don't know.
+Personally, I added '-t crombuntu' because I think it's funny.
 
 CPU usage with the default settings is rather higher than
 standard, but I've been happy with the performance.

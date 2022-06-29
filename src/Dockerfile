@@ -49,7 +49,9 @@ RUN apt-get update \
 RUN mkdir -p /var/lib/conanexiles
 
 # Contents of from the image have been copied to the src folder in appropriate directories..
-COPY . ./
+COPY . /
+# Will try deleting this line later.
+COPY ./entrypoint.sh ./
 
 RUN ln -snf /usr/share/zoneinfo/$TIMEZONE /etc/localtime \
     && echo $TIMEZONE > /etc/timezone \
