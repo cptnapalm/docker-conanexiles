@@ -16,9 +16,10 @@ pulled in is now standard Ubuntu 22.04.
 
 One consequence is that the docker image will need to be built.
 cd your way to the src directory and:
-docker build /path/to/Dockerfile/directory
+docker build -t crombuntu /path/to/Dockerfile/directory
 Note: 'docker build - < Dockerfile' doesn't work. Why?  Don't know.
-Personally, I added '-t crombuntu' because I think it's funny.
+Personally, I added '-t crombuntu' because I think it's funny. If
+you don't, then change it and the docker-compose file to match.
 
 CPU usage with the default settings is rather higher than
 standard, but I've been happy with the performance.
@@ -27,6 +28,8 @@ PVE is now the default.
 
 It works for me which is pretty good as the first time I have
 ever touched docker was about 12 hours ago.
+
+The multi-instance version of the file has not been tested.
 
 ---
 **NOTE**
