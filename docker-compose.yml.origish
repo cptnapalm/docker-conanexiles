@@ -2,32 +2,18 @@ version: "3.5"
 
 services:
   ce0:
-    # image: alinmear/docker-conanexiles:latest
-    image: crombuntu:latest
-    # restart: unless-stopped
-    restart: "no"
+    image: alinmear/docker-conanexiles:latest
+    restart: unless-stopped
     environment:
-      ## ServerSettings.ini:[ServerSettings]
-      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=Belit"
-      # Set region to US
-      - "CONANEXILES_ServerSettings_ServerSettings_serverRegion=1"
-      # Set to relaxed community
-      - "CONANEXILES_ServerSettings_ServerSettings_ServerCommunity=2"
-      # Don't have offline characters in the world
-      - "CONANEXILES_ServerSettings_ServerSettings_LogoutCharacterRemainInTheWorld=False"
-      - "CONANEXILES_ServerSettings_ServerSettings_MaxNudity=1"
-      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=Dalazar"
-        # - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=MySecret"
+      - "CONANEXILES_ServerSettings_ServerSettings_AdminPassword=ThanksForThisSmartSolution"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerName=My Cool Server 1"
+      - "CONANEXILES_Engine_OnlineSubSystemSteam_ServerPassword=MySecret"
+      - "CONANEXILES_INSTANCENAME=exiles0"
       - "CONANEXILES_Game_RconPlugin_RconEnabled=1"
-      - "CONANEXILES_Game_RconPlugin_RconPassword=Belit"
+      - "CONANEXILES_Game_RconPlugin_RconPassword=REDACTED"
       - "CONANEXILES_Game_RconPlugin_RconPort=25575"
       - "CONANEXILES_Game_RconPlugin_RconMaxKarma=60"
       - "CONANEXILES_UPDATE_SHUTDOWN_TIMER=15"
-      - "CONANEXILES_SERVER_TYPE=pve"
-      - "CONANEXILES_MASTERSERVER=1"
-      - "CONANEXILES_INSTANCENAME=dalazar"
-      - "CONANEXILES_PORT=7777"
-      - "CONANEXILES_QUERY_PORT=27015"
       # Mods
       ## Pippi: 880454836                                    # Servermanagemnt on another level
       ## Fashionist: 1159180273                              # Nice Styles, also restyle ingame
@@ -36,8 +22,7 @@ services:
       ## Less Building Placement Restrictions: 1369743238    # Stop limitations of building system
       ## Lexa's Exiled Lands Improved: 2356146223            # Dual Wield (Sword, Axe) and some other nice enhacements
       ## Javelin Improved: 1701136207                        # One of the best, new javelin combos and styles, well balanced
-      ##- "CONANEXILES_MODS=880454836,1159180273,1389908968,1369743238,2050780234,2356146223,1701136207"
-      # - "CONANEXILES_MODS=880454836"
+#      - "CONANEXILES_MODS=880454836,1159180273,1389908968,1369743238,2050780234,2356146223,1701136207"
       # Very Good Defaults
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxClientRate=600000"
