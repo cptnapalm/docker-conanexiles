@@ -2,7 +2,6 @@ version: "3.5"
 
 services:
   ce0:
-    # image: alinmear/docker-conanexiles:latest
     image: crombuntu:latest
     # restart: unless-stopped
     restart: "no"
@@ -39,7 +38,8 @@ services:
       ##- "CONANEXILES_MODS=880454836,1159180273,1389908968,1369743238,2050780234,2356146223,1701136207"
       # - "CONANEXILES_MODS=880454836"
       # Very Good Defaults
-      - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
+      - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=60" #INSERT A VALUE OF 30 OR HIGHER
+      #- "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_NetServerMaxTickRate=30" #INSERT A VALUE OF 30 OR HIGHER
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxClientRate=600000"
       - "CONANEXILES_Engine_/script/onlinesubsystemutils.ipnetdriver_MaxInternetClientRate=600000"
       - "CONANEXILES_Engine_SystemSettings_dw.NetClientFloatsDuringNavWalking=0"
@@ -85,9 +85,9 @@ services:
       - "CONANEXILES_Engine_/script/aimodule.crowdmanager_bResolveCollisions=True"
       - "CONANEXILES_Engine_/script/aimodule.aisystem_bAllowStrafing=True"
       - "CONANEXILES_Engine_/script/engine.audiosettings_bAllowCenterChannel3DPanning=True"
-      - "CONANEXILES_Game_/script/engine.gamenetworkmanager_TotalNetBandwidth=80000000"
-      - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MaxDynamicBandwidth=100000"
-      - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MinDynamicBandwidth=10000"
+#      - "CONANEXILES_Game_/script/engine.gamenetworkmanager_TotalNetBandwidth=80000000"
+#      - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MaxDynamicBandwidth=100000"
+#      - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MinDynamicBandwidth=10000"
       - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MoveRepSize=512.0f"
       - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MAXPOSITIONERRORSQUARED=3.0f"
       - "CONANEXILES_Game_/script/engine.gamenetworkmanager_MAXCLIENTUPDATEINTERVAL=0.25f"
