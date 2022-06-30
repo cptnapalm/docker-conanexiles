@@ -31,6 +31,13 @@ ever touched docker was about 12 hours ago.
 
 The multi-instance version of the file has not been tested.
 
+*New*
+There remains the peculiarity of the server continuing to run, but
+it stops outputing to the log and cannot be connected to.  It can
+be seen that the service is running but now consumes only a
+fraction of the CPU.  It may or may not be related to the steamcmd
+running.
+
 ---
 **NOTE**
 
